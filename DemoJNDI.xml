@@ -1,0 +1,20 @@
+﻿<Context>
+	<!--
+		name:指定资源的名称
+		factory:指定工厂，由谁负责创建资源
+		type:资源的类型
+		其他的东西都是资源参数
+		需要配置在该文件夹下才能生效D:\Tomcat\apache-tomcat-6.0.39-windows-x64\apache-tomcat-6.0.39\conf\Catalina\localhost
+	-->
+	<Resource 
+		name="jdbc/dataSource"
+		factory="org.apache.naming.factory.BeanFactory"
+		type="com.mchange.v2.c3p0.ComboPooledDataSource"
+		jdbcUrl="jdbc:mysql://localhost:3306/mydb1"
+		driverClass="com.mysql.jdbc.Driver"
+		user="root"
+		password="1234"
+		acquireIncrement="5"
+		initialPoolSize="10"
+	/>
+</Context>
